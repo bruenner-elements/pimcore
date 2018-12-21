@@ -21,6 +21,7 @@ pimcore.object.tags.nonownerobjects = Class.create(pimcore.object.tags.objects, 
 
             Ext.Ajax.request({
                 url: "/admin/object/get",
+                async: false,
                 params: {id: this.getStore().getAt(index).data.id},
                 success: function(item, index, response) {
                     this.data = Ext.decode(response.responseText);
